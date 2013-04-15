@@ -1,3 +1,8 @@
+/*
+    Launches svn command line and returns result a js object.
+    Returns a promise.
+*/
+
 var 
     parseString = require('xml2js').parseString,
     Q = require('q')

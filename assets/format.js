@@ -1,3 +1,8 @@
+/*
+    Formats raw xml logs to proper JS object.
+    Returns a promise.
+*/
+
 var 
     Q = require('q'),
     async = require('async'),
