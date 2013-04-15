@@ -1,0 +1,17 @@
+{
+  "name": "svnlog",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "xml2js": "~0.2.6",
+    "q": "~0.9.3",
+    "async": "~0.2.7",
+    "moment": "~2.0.0"
+  },
+  "devDependencies" : {
+    "eyes": "~0.1.8"
+  }
+}

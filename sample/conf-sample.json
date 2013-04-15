@@ -1,0 +1,5 @@
+{
+    "repo"        : "svn://my/wonderful/repo/",
+    "startRev"    : "135986",
+    "endRev"      : "145405"
+}
