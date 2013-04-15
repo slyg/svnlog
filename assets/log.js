@@ -8,7 +8,7 @@ module.exports = function log(revStart, revEnd, repo){
     var
         deferred        = Q.defer(),
         spawn           = require('child_process').spawn,
-        svn             = spawn('svn' , ['log', '-r', revStart + ':' + revEnd, '--xml', repo]),
+        svn             = spawn('svn' , ['log', '-r', revStart + ':' + revEnd, '--xml', '--verbose', repo]),
         result          = ""
     ;
     

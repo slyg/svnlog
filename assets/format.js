@@ -22,7 +22,8 @@ module.exports = function log(dataArray){
             dateFromNow : moment(item.date[0]).fromNow(),
             dateUTC : item.date[0],
             author : item.author[0],
-            type : getTypeFrom(item.msg[0])
+            type : getTypeFrom(item.msg[0]),
+            paths : getPathsFrom(item.paths[0].path)
         });
         
         next();
@@ -46,5 +47,26 @@ function getTypeFrom(dataString){
     while(i--){ if(dataString.toLowerCase().indexOf(t[i]) != -1) type = t[i]; }
     return type;
 
+}
+
+function getPathsFrom(dataArray){
+
+    var 
+        paths = [],
+        len = dataArray.length,
+        item = {}
+    ;
+    
+    while(len--){
+        item = dataArray[len];
+        paths.push({
+            path : item._,
+            kind : item.$.kind,
+            action : item.$.action
+        });
+    }
+    
+    return paths;
+    
 }
 
