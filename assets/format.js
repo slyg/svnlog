@@ -58,16 +58,20 @@ function getPathsFrom(dataArray){
 
     var 
         paths = [],
+        extpatt = /\.[0-9a-z]+$/i,
+        extbuffer = [],
         len = dataArray.length,
         item = {}
     ;
     
     while(len--){
         item = dataArray[len];
+        extbuffer = item._.match(extpatt) || [];
         paths.push({
             path : item._,
             kind : item.$.kind,
-            action : item.$.action
+            action : item.$.action,
+            extension : (extbuffer.length > 0) ? extbuffer[0] : 'none'
         });
     }
     
