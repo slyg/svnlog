@@ -8,12 +8,13 @@ var
     Q = require('q')
 ;
 
-module.exports = function log(revStart, revEnd, repo){
+module.exports = function svncl(){
 
     var
+        command         = Array.prototype.slice.call(arguments, 0),
         deferred        = Q.defer(),
         spawn           = require('child_process').spawn,
-        svn             = spawn('svn' , ['log', '-r', revStart + ':' + revEnd, '--xml', '--verbose', repo]),
+        svn             = spawn('svn', command),
         result          = ""
     ;
     
