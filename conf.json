@@ -1,0 +1,3 @@
+{
+    "prefixes" : ["bugfix", "feature", "optim", "merge", "revert", "refactoring"]
+}
